@@ -37,4 +37,54 @@ a,a:hover{color:#000;outline:0;text-decoration:none;-webkit-transition:all 0.4s 
 div[data-oembed-url] > div {
     padding-bottom: 20px;
 }
-    </style>
+
+
+/* Sidebar  */
+amp-sidebar#amp-mobile-sidebar {
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+}
+button.sidebar-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    width: auto;
+    outline: none;
+    background: transparent;
+    border-radius: 0;
+}
+
+button.sidebar-close > .mobile_close_icons.closed_menu {
+    margin: 6px;
+}
+ul.mobile-menu {
+    margin: 60px 0 0;
+    padding: 00;
+}
+
+ul.mobile-menu h4,
+ul.mobile-menu>li>a {
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: -0.025em;
+    margin:0;
+    display:inline-block
+
+}
+input#opensearch:checked~.search-box > .search_form_menu_personal {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+}
+@media(max-width: 767px){
+	.search-box .search_form_menu_personal .searchform_theme .search_btn{
+		    font-size: 25px;
+		    padding: 14px 0;
+	}
+    
+}
+</style>
