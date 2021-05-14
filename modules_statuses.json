@@ -1,0 +1,8 @@
+{
+    "System": true,
+    "User": true,
+    "Blog": true,
+    "Post": true,
+    "Activity": true,
+    "Frontend": true
+}

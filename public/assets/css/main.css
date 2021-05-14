@@ -1,0 +1,63 @@
+.searching {
+    transform: translateY(-100%);
+    transition: all ease-in-out 0.5s;
+}
+
+.search-animation {
+    transform: translateY(0);
+}
+
+.searching .close_btn {
+    background: none;
+    font-size: 30px;
+}
+
+.slider-image {
+    height: 66px;
+    object-fit: cover;
+    object-position: top;
+    width: 90px;
+}
+
+.widgets_small .post_img img {
+    height: 77px;
+    object-position: top;
+    width: 100px;
+}
+
+.dark-theme .main-nav {
+    min-height: 50px;
+}
+
+.pop-culture-image {
+    height: 320px;
+    width: 100% !important;
+    object-position: top;
+}
+
+.latest-post-image {
+    min-height: 500px;
+    max-height: 500px;
+}
+
+a.single_social {
+    padding: 9px 9px 9px 30px;
+    margin: 0 0 5px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+    a.single_social {
+        width: 24%;
+    }
+}
+@media screen and (min-width: 460px) and (max-width: 991px) {
+    a.single_social {
+        width: 24%;
+    }
+}
+
+@media (max-width: 767px) {
+    .theme-1 .logo {
+        padding: 13px 0 25px;
+    }
+}

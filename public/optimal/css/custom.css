@@ -1,0 +1,215 @@
+.size-sprasa_small_feature{
+    height:115px;
+    width:120px;
+    object-fit: cover;
+    object-position: top;
+}
+.size-sprasa_slider_grid_small{
+    height:350px;
+    width:500px;
+    object-fit: cover;
+}
+.size-sprasa_feature_large{
+    width:550px;
+    max-height:400px;
+    object-fit: cover;
+}
+@media (min-width: 759px) {
+    .size-feature-small{
+        width:255px;
+        height:166px;
+        object-fit: cover;
+    }
+}
+.home_section1{
+    margin-top: 30px;
+}
+
+.g_4col.jl_grid_wrap_f .jl-col3 .jl_post_meta .post-read-time {
+    display: inline;
+}
+.size-sprasa_feature_small{
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+}
+.footer-columns .jl_cat_img_w .jl_cm_overlay{
+    left:8px;
+}
+
+.g_4col.jl_grid_wrap_f .text-box h3 a{
+    font-size: 17px;
+    margin-bottom: 0;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3.7em;
+}
+
+.size-sprasa_slider_grid_small{
+    width:355px;
+    height:249px;
+    object-fit: cover;
+}
+.widget-title .jl_title_c, .widget_jl_wrapper h5{
+    margin-bottom: 15px;
+}
+
+.single_post_share_icon_post li.single_post_share_instagram a i{
+    background: #405DE6;
+    position: relative;
+}
+.large-banner-ad{
+    margin-top:50px;
+    margin-bottom:60px;
+}
+.ajax-ad-container{
+    margin-bottom:30px;
+}
+.jl_logo_n{
+    max-width: 205px;
+}
+.jl_logo_w{
+    max-width: 205px;
+}
+
+dl, ol, ul{
+    margin-top: 5px;
+}
+.post-main-image{
+    width: 100%;
+    object-fit: contain;
+}
+div[data-oembed-url] > div {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.divider{
+    height:0;
+    margin:.5rem 0;
+    overflow:hidden;
+    border-top:1px solid #e9ecef;
+}
+
+.menuBox{
+    list-style: none;
+    padding-left: 30px;
+}
+
+.remove-logo{
+    display: inline-block;
+}
+@media only screen and (max-width: 768px) {
+    .header_top_bar_wrapper{
+        display: none;
+    }
+}
+
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+.cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: rgb(0 0 0 / 80%);
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 16px;
+    max-width: 800px;
+    margin-left: auto;
+    text-align: right;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: none;
+}
+.cookie-popup p {
+    font-size: 0.9rem;
+}
+.cookie-popup p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.cookie-popup button {
+    border: none;
+    padding: 5px 16px;
+    text-shadow: none;
+    font-size: 14px;
+    background: black;
+    color: #fff;
+    line-height:22px !important;
+    cursor: pointer;
+}
+.cookie-popup p {
+    text-align: left;
+}
+.cookie-popup a {
+    color: #ff8fd5;
+    font-weight: 600;
+}
+@media (max-width: 767.98px) {
+    .cookie-popup {
+        max-width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+        border-radius: 0;
+        padding: 5px;
+        margin-bottom: 0;
+    }
+}
+.cookie-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cookie-text {
+    text-align: left;
+    display: inline-block;
+    max-width: calc(100% - 60px);
+    font-size: 80%;
+    color:white;
+}
+.cookie-text a {
+    color: #bbb;
+    font-weight: 600;
+    border-bottom: 1px solid;
+}
+.cookie-text h3 {
+    margin: 0 0 4px;
+    font-weight: 600;
+    color:white;
+}
+.cookie-text p {
+    margin: 0;
+    color:white;
+}
+@media (max-width: 980px) {
+    .cookieConsentContainer {
+        bottom: 0px !important;
+        left: 0px !important;
+        width: 100% !important;
+    }
+}
+@media (min-width: 320px){
+    .jl_header_magazine_style.header_layout_style3_custom .logo_small_wrapper_table .logo_small_wrapper a img {
+        max-height: 22px;
+    }
+}
+
+
+
+@media (max-width: 991px){
+    .cky-banner .cky-button-wrapper{margin-left:0;margin-top:20px;}
+    .cky-consent-bar.cky-banner,.cky-consent-bar.cky-banner p,.cky-banner .cky-button-wrapper,.cky-banner .cky-content-wrapper{display:block;text-align:center;}
