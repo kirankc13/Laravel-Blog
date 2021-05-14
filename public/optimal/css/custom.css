@@ -207,7 +207,9 @@ div[data-oembed-url] > div {
         max-height: 22px;
     }
 }
-
+.post_content blockquote {
+    float: none;
+}
 
 
 @media (max-width: 991px){
