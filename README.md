@@ -70,6 +70,8 @@
 5. Run <pre>php artisan migrate</pre>
 6. Seed Systems Module for required Settings to work <pre>php artisan module:seed System</pre>
 7. Seed User Module for ACL to work <pre>php artisan module:seed User</pre>
+8. Create a Symlink <pre>php artisan storage:link</pre>
+
 
 ## This project uses the following packages
 1. <pre>nwidart/laravel-modules</pre>
