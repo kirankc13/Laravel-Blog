@@ -102,6 +102,7 @@ class FrontServices
             $object->summary = $post->summary;
             $object->category_url = url('/'.$post->category->slug);
             $object->post_url = url('/'.$post->category->slug.'/'.$post->slug);
+            $object->amp_url = url('amp/'.$post->category->slug.'/'.$post->slug);
             $object->created_at = $post->created_at;
             $object->updated_at = $post->updated_at;
             $object->image = render($post->featured_image);
@@ -144,7 +145,7 @@ class FrontServices
             return $q->whereIn('name', $article->postTags->pluck('name'));
         })
         ->where('id', '!=', $article->id)
-        ->take(4)->get();
+        ->take(5)->get();
         return $this->FormatPosts($related);
     }
 

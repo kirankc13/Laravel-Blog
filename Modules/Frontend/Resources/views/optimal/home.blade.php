@@ -97,9 +97,7 @@
             </div>
         </section>
         <div class="container large-banner-ad">
-            <a href="#">
-                <img src="../assets/img/bg/banner1.png" alt="">
-            </a>
+            {!! $settings['banner-ad'] !!}
         </div>
         @if(isset($section['one']))
         @if(count($section['one']->posts) > 0)
@@ -154,9 +152,7 @@
                                     </div>
                                     @endforeach
                                     <div class="container">
-                                        <a href="#">
-                                            <img src="../assets/img/bg/banner1.png" alt="">
-                                        </a>
+                                        {!! $settings['banner-ad'] !!}
                                     </div>
                                 </div>
                             </div>
@@ -247,9 +243,7 @@
         @endif
         @endif
         <div class="container large-banner-ad">
-            <a href="#">
-                <img src="../assets/img/bg/banner1.png" alt="">
-            </a>
+            {!! $settings['banner-ad'] !!}
         </div>
         @if(isset($section['three']))
         @if(count($section['three']->posts) > 0)
@@ -365,9 +359,7 @@
         @endif
         @endif
         <div class="container large-banner-ad">
-            <a href="#">
-                <img src="../assets/img/bg/banner1.png" alt="">
-            </a>
+            {!! $settings['banner-ad'] !!}
         </div>
         @if(isset($section['five']))
         @if(count($section['five']->posts) > 0)

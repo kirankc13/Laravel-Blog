@@ -117,8 +117,6 @@ class FrontendController extends FrontController
             $article->save();
             $post->timestamps = true;
 
-
-
             $related_articles = $this->service->GetRelatedarticles($article);
             $converter = new Converter();
             $converter->loadDefaultConverters();
@@ -268,6 +266,22 @@ class FrontendController extends FrontController
         }
         Session::flash('success','Thank you for subscribing to our newsletter.');
         return redirect()->back();
+
+    }
+
+    public function AmpSubscription(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+        ]);
+        $exists = Newsletter::where('email',$request->email)->first();
+        if(!$exists){
+            $subscriptions = new Newsletter();
+            $subscriptions->email = $request->email;
+            $subscriptions->ip = $request->ip();
+            $subscriptions->save();
+        }
+        return response()->json('success', 200);
     }
 
 

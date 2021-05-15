@@ -21,7 +21,7 @@
                     @endif
                 </ul>
                 <div class="ads300x250-thumb jl_radus_e">
-                    <a href="#"><img src="{{asset('optimal/img/ads.png')}}" alt="" /></a>
+                    {!! $settings['sidebar-ad'] !!}
                 </div>
             </div>
         </div>

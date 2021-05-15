@@ -1,7 +1,5 @@
 <div class="container ajax-ad-container">
-    <a href="#">
-        <img src="../assets/img/bg/banner1.png" alt="">
-    </a>
+    {!! setting('banner-ad') !!}
 </div>
 @foreach($posts as $post)
 <div class="box jl_grid_layout1 blog_grid_post_style post-2957 post type-post status-publish format-standard has-post-thumbnail hentry category-inspiration tag-morning">

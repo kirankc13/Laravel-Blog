@@ -21,6 +21,7 @@ Route::get('tag/{tag}','FrontendController@Tag')->name('tag');
 Route::get('/{category_slug}/{slug}','FrontendController@Post')->name('post');
 Route::get('/amp/{category_slug}/{slug}','FrontendController@AmpPost')->name('amp.post');
 Route::post('subscribe','FrontendController@Subscription')->name('subscribe');
+Route::post('amp/subscribe','FrontendController@AmpSubscription')->name('amp.subscribe');
 
 
 Route::prefix('admin/'.env('ADMIN_URL_SECRET'))->group(function() {

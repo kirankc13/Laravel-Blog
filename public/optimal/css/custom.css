@@ -211,6 +211,16 @@ div[data-oembed-url] > div {
     float: none;
 }
 
+.post-banner-ad {
+    margin-bottom: 20px;
+}
+
+.in-between-ads{
+    margin-bottom: 30px;
+}
+label{
+    margin-bottom: 0rem;
+}
 
 @media (max-width: 991px){
     .cky-banner .cky-button-wrapper{margin-left:0;margin-top:20px;}

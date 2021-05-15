@@ -8,6 +8,9 @@
         <div class="row main_content">
             <div class="col-md-8 loop-large-post" id="content">
                 <div class="widget_container content_page">
+                    <div class="container post-banner-ad">
+                        {!! $settings['banner-ad'] !!}
+                    </div>
                     <!-- start post -->
                     <div
                         class="post-2970 post type-post status-publish format-gallery has-post-thumbnail hentry category-business tag-inspiration tag-morning tag-tip tag-tutorial post_format-post-format-gallery"
@@ -46,7 +49,23 @@
                             </div>
                             <div class="post_content_w">
                                 <div class="post_content jl_content">
-                                   {!! $post->description !!}
+                                    @php
+                                        $detail = $post->description;
+                                        $dom = new DOMDocument;
+                                        libxml_use_internal_errors(true);
+                                        $dom->loadHTML($detail);
+                                        $total_paragraph = $dom->getElementsByTagName('p')->length;
+                                        $pattern = "#<p[^>]*>(\s|&nbsp;|</?\s?br\s?/?>)*</?p>#";
+                                        $content = explode("</p>", preg_replace($pattern, '', $detail));
+                                    @endphp
+                                    @foreach($content as $c)
+                                            @if($loop->iteration == 2 || $loop->iteration == ceil($total_paragraph / 2) )
+                                                    <div class="in-between-ads text-center">
+                                                        {!! $settings['between-articles-ad'] !!}
+                                                    </div>
+                                            @endif
+                                    {!! $c !!}
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="clearfix"></div>
