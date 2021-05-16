@@ -3,12 +3,12 @@
 2. Run the following code <pre>composer install</pre>
 3. Setup your Environment file. This project comes with Google analytics integrated dashboard. So update your environment variables according for Google Analytics widget to work
     <pre>
-    APP_NAME='Stuffs That Matter'
+    APP_NAME=APP_NAME
     APP_ENV=local
     APP_KEY=base64:NIuy1yYucKYzVoM0L0UVUJaP+RMxwwXk0eLPZNARhrY=
     APP_DEBUG=true
-    APP_URL=https://master.test
-    ADMIN_URL_SECRET='stm'
+    APP_URL=YOUR_APP_URL
+    ADMIN_URL_SECRET='url_after_admin'
 
     LOG_CHANNEL=stack
     LOG_LEVEL=debug
