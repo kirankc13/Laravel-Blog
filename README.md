@@ -1,7 +1,7 @@
 # Project setup
 1. Clone the repository
 2. Run the following code <pre>composer install</pre>
-3. Setup your Environment file. This project comes with Google analytics integrated dashboard. So update your environment variables according for Google Analytics widget to work
+3. Setup your Environment variables. This project comes with Google analytics integrated dashboard. So update your environment variables accordingly for Google Analytics widget to work
     <pre>
     APP_NAME=APP_NAME
     APP_ENV=local
