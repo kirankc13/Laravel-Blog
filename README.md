@@ -1,62 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Project setup
+1. Clone the repository
+2. Run the following code <pre>composer install</pre>
+3. Setup your Environment file. This project comes with Google analytics integrated dashboard. So update your environment variables according for Google Analytics widget to work
+    <pre>
+    APP_NAME='Stuffs That Matter'
+    APP_ENV=local
+    APP_KEY=base64:NIuy1yYucKYzVoM0L0UVUJaP+RMxwwXk0eLPZNARhrY=
+    APP_DEBUG=true
+    APP_URL=https://master.test
+    ADMIN_URL_SECRET='stm'
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+    LOG_CHANNEL=stack
+    LOG_LEVEL=debug
 
-## About Laravel
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=db_name
+    DB_USERNAME=root
+    DB_PASSWORD=
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    BROADCAST_DRIVER=log
+    CACHE_DRIVER=file
+    QUEUE_CONNECTION=sync
+    SESSION_DRIVER=file
+    SESSION_LIFETIME=120
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    MEMCACHED_HOST=127.0.0.1
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    REDIS_HOST=127.0.0.1
+    REDIS_PASSWORD=null
+    REDIS_PORT=6379
 
-## Learning Laravel
+    MAIL_MAILER=smtp
+    MAIL_HOST=smtp.mailtrap.com
+    MAIL_PORT=587
+    MAIL_USERNAME='YOUR MAIL_USERNAME'
+    MAIL_PASSWORD='YOUR MAIL_PASSWORD'
+    MAIL_ENCRYPTION=tls
+    MAIL_FROM_ADDRESS='YOUR MAIL_FROM_ADDRESS'
+    MAIL_TO_ADDRESS='YOUR MAIL_TO_ADDRESS'
+    MAIL_FROM_NAME="YOUR MAIL_FROM_NAME"
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    AWS_ACCESS_KEY_ID=
+    AWS_SECRET_ACCESS_KEY=
+    AWS_DEFAULT_REGION=us-east-1
+    AWS_BUCKET=
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    ANALYTICS_VIEW_ID="228421620"  
 
-## Laravel Sponsors
+    GA_TYPE="YOUR GA TYPE"
+    GA_PROJECT_ID="YOUR GA PROJECT ID"
+    GA_PRIVATE_KEY_ID="YOUR GA PRIVATE KEY ID"
+    GA_PRIVATE_KEY= "YOUR GA PRIVATE KEY"
+    GA_CLIENT_ID="YOUR GA CLINET ID"
+    GA_AUTH_URI="GA_AUTH_URI"
+    GA_TOKEN_URI= "GA_TOKEN_URI"
+    GA_AUTH_PROVIDER_x509_CERT_URL= "GA_AUTH_PROVIDER_x509_CERT_URL"
+    GA_CLIENT_x509_CERT_URL= "GA_CLIENT_x509_CERT_URL"
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    PUSHER_APP_ID=
+    PUSHER_APP_KEY=
+    PUSHER_APP_SECRET=
+    PUSHER_APP_CLUSTER=mt1
 
-### Premium Partners
+    MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+    MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+    </pre>
+5. Run <pre>php artisan migrate</pre>
+6. Seed Systems Module for required Settings to work <pre>php artisan module:seed System</pre>
+7. Seed User Module for ACL to work <pre>php artisan module:seed User</pre>
+8. Create a Symlink <pre>php artisan storage:link</pre>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+## This project uses the following packages
+1. <pre>nwidart/laravel-modules</pre>
+2. <pre>rap2hpoutre/laravel-log-viewer</pre>
+3. <pre>spatie/laravel-activitylog</pre>
+4. <pre>spatie/laravel-analytics</pre>
+5. <pre>spatie/laravel-permission</pre>
+6. <pre>stevebauman/location</pre>
+7. <pre>magyarandras/amp-converter</pre>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
