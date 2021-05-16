@@ -37,9 +37,15 @@
 <meta name="description" content="{{$post->meta_desc}}">
 <meta property="og:image" content="{{ $post->image }}">
 <meta property="og:image:secure_url" content="{{ $post->image }}">
+
 <meta name=”twitter:title” content="{{$post->title}}">
 <meta name=”twitter:description” content="{{$post->meta_desc}}">
 <meta name=”twitter:image” content="{{ $post->image }}">
+<meta name="twitter:card" content="#">
+<meta name="twitter:site" content="#">
+<meta name="twitter:creator" content="#">
+<meta property="twitter:url" content="{{ $post->post_url }}">
+<meta name="keywords" content="">
 @if(Request::routeIs('post'))
 <link rel="amphtml" href="{{$post->amp_url}}">
 @else

@@ -12,6 +12,25 @@
                         {!! $settings['banner-ad'] !!}
                     </div>
                     <!-- start post -->
+                    <nav class="breadcrumbs-container" aria-label="Breadcrumb">
+                        <ol class="breadcrumbs-list">
+                            <li class="breadcrumbs-item">
+                                <a class="breadcrumbs-link" href="{{route('home')}}"> <span class="breadcrumbs-title"> Home </span> </a>
+                                <span class="icon breadcrumbs-icon">
+                                    <span class="jli-right-chevron"></span>
+                                </span>
+                            </li>
+                            <li class="breadcrumbs-item breadcrumbs-item-last">
+                                <a class="breadcrumbs-link" href="{{$post->category_url}}"> <span class="breadcrumbs-title"> {{$post->category}} </span> </a>
+                                <span class="icon breadcrumbs-icon breadcrumbs-icon-last">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 48" aria-hidden="true" style="transform: rotate(180deg);" tabindex="-1">
+                                        <path fill="#000" d="M19.98 5L4 24.2l15.98 19.2.02-4.512L7.874 24.2 20 9.512z"></path>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="breadcrumbs-item visually-hidden" aria-current="page">{{$post->title}}</li>
+                        </ol>
+                    </nav>
                     <div
                         class="post-2970 post type-post status-publish format-gallery has-post-thumbnail hentry category-business tag-inspiration tag-morning tag-tip tag-tutorial post_format-post-format-gallery"
                         id="post-2970"
@@ -19,11 +38,11 @@
                         <div class="single_section_content box blog_large_post_style">
                             <div class="jl_single_style2">
                                 <div class="single_post_entry_content single_bellow_left_align jl_top_single_title jl_top_title_feature">
-                                    <span class="meta-category-small single_meta_category"><a class="post-category-color-text" style="background: #eba845;" href="#">{{$post->category}}</a></span>
                                     <h1 class="single_post_title_main">{{$post->title}}</h1>
                                     <p class="post_subtitle_text">
                                         {{$post->sub_title}}
                                     </p>
+                                    <span class="meta-category-small single_meta_category"><a class="post-category-color-text" style="background: #eba845;" href="#">{{$post->category}}</a></span>
                                     <span class="jl_post_meta">
                                         <span class="jl_author_img_w"><i class="jli-user"></i><a href="{{$post->author_url}}" title="Posts by {{$post->author}}" rel="author">{{$post->author}}</a></span>
                                         @if($post->created_at != $post->updated_at)

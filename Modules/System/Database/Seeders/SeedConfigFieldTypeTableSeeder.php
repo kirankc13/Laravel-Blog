@@ -188,11 +188,11 @@ class SeedConfigFieldTypeTableSeeder extends Seeder
                 'group' => 'Front'
             ],
             [
-                'title' => 'Website Title',
+                'title' => 'Site maps per index',
                 'configuration_type' => 'system_config',
-                'detail' => 'Website main title',
-                'key' => 'website-title',
-                'field_type' => 'text_box',
+                'detail' => 'Sitemaps per index',
+                'key' => 'site-maps-per-index',
+                'field_type' => 'number',
                 'status' => true,
                 'user_configurable' => false,
                 'options' => null,

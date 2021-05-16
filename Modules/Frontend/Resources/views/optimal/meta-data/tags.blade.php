@@ -44,8 +44,8 @@
 <meta name=”twitter:title” content="Post results for '{{$tag->name}}'">
 <meta name=”twitter:description” content="Post results for '{{$tag->name}}'">
 @if(isset($settings['og:image']))
-<meta property="og:image" content="{{$configurations['og:image']}}">
-<meta property="og:image:secure_url" content="{{$configurations['og:image']}}">
-<meta name=”twitter:image” content="{{$configurations['og:image']}}">
+<meta property="og:image" content="{{$settings['og:image']}}">
+<meta property="og:image:secure_url" content="{{$settings['og:image']}}">
+<meta name=”twitter:image” content="{{$settings['og:image']}}">
 @endif
 <link rel="canonical" href="{{route('tag',$tag->name)}}">

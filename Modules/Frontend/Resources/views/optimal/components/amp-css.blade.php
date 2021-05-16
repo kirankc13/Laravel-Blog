@@ -153,12 +153,67 @@ input#opensearch:checked~.search-box > .search_form_menu_personal {
 }
 .post-banner-ad {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .in-between-ads{
     margin-bottom: 30px;
+    text-align: center;
 }
 .row{
   margin-bottom: 0px
 }
+
+.breadcrumbs-container {
+    display: block;
+    margin-bottom: 10px;
+}
+[tabindex="-1"]:focus:not(:focus-visible) {
+    outline: 0;
+}
+.breadcrumbs-list {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+ol.breadcrumbs-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    list-style: none;
+}
+.breadcrumbs-icon {
+    align-items: center;
+    justify-content: center;
+    color: #e94295;
+    display: inline-flex;
+    margin: 0 8px;
+    position: relative;
+    top: 0;
+}
+.breadcrumbs-icon svg {
+    height: 24px;
+    width: 12px;
+    fill: #ff1c8d;
+}
+li.breadcrumbs-item {
+    display: flex;
+    align-content: center;
+    list-style-type: none;
+}
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+.breadcrumbs-icon-last {
+    display: none;
+}
+
+
 </style>

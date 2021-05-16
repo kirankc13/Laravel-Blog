@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/sitemap.xml', 'SitemapController@index')->name('sitemap.xml');
+Route::get('/sitemap_{id}.xml', 'SitemapController@sitemap');
+Route::get('/rss.xml', 'SitemapController@RSS');
 
 Route::get('/', 'FrontendController@index')->name('home');
 Route::get('/search','FrontendController@Search')->name('search');
@@ -22,6 +25,7 @@ Route::get('/{category_slug}/{slug}','FrontendController@Post')->name('post');
 Route::get('/amp/{category_slug}/{slug}','FrontendController@AmpPost')->name('amp.post');
 Route::post('subscribe','FrontendController@Subscription')->name('subscribe');
 Route::post('amp/subscribe','FrontendController@AmpSubscription')->name('amp.subscribe');
+
 
 
 Route::prefix('admin/'.env('ADMIN_URL_SECRET'))->group(function() {

@@ -145,6 +145,8 @@ class FrontServices
             return $q->whereIn('name', $article->postTags->pluck('name'));
         })
         ->where('id', '!=', $article->id)
+        ->where('posts.status',1)
+        ->where('posts.published',1)
         ->take(5)->get();
         return $this->FormatPosts($related);
     }
@@ -155,6 +157,8 @@ class FrontServices
             return $q->whereIn('name', $article->postTags->pluck('name'));
         })
         ->where('id', '!=', $article->id)
+        ->where('posts.status',1)
+        ->where('posts.published',1)
         ->take(4)->get();
         return $this->FormatPosts($related);
     }
@@ -163,6 +167,8 @@ class FrontServices
     {
         $previous = Post::leftjoin('categories','categories.id','posts.category_id')
         ->where('posts.id', '<', $article->id)
+        ->where('posts.status',1)
+        ->where('posts.published',1)
         ->orderBy('posts.id','desc')
         ->select('posts.*','categories.slug as cat_slug')
         ->first();
@@ -193,6 +199,8 @@ class FrontServices
     {
         $next = Post::leftjoin('categories','categories.id','posts.category_id')
                     ->where('posts.id', '>', $article->id)
+                    ->where('posts.status',1)
+                    ->where('posts.published',1)
                     ->select('posts.*','categories.slug as cat_slug')
                     ->first();
         if($next){

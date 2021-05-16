@@ -1,9 +1,7 @@
 <!doctype html>
 <html ⚡ lang="en-us">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="This is the AMP Boilerplate.">
+    @include('frontend::optimal.meta-data.post')
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
     <link rel="preload" href="hero-img.jpg" as="image">
@@ -21,39 +19,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     @include('frontend::optimal.components.amp-css')
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="canonical" href=".">
-    <title>{{$post->title}}</title>
-    <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "NewsArticle",
-          "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://google.com/article"
-      },
-      "headline": "Article headline",
-      "image": [
-      "https://example.com/photos/1x1/photo.jpg",
-      "https://example.com/photos/4x3/photo.jpg",
-      "https://example.com/photos/16x9/photo.jpg"
-      ],
-      "datePublished": "2015-02-05T08:00:00+08:00",
-      "dateModified": "2015-02-05T09:20:00+08:00",
-      "author": {
-      "@type": "Person",
-      "name": "John Doe"
-  },
-  "publisher": {
-  "@type": "Organization",
-  "name": "AMP Project",
-  "logo": {
-  "@type": "ImageObject",
-  "url": "https://google.com/logo.jpg"
-}
-},
-"description": "A most wonderful article"
-}
-</script>
 </head>
 <body>
     <div class="options_layout_wrapper jl_clear_at jl_radius jl_none_box_styles jl_border_radiuss jl_en_day_night {{isset($_COOKIE['dark_mode']) ? 'options_dark_skin' : ''}}">
@@ -176,6 +141,28 @@
                         <div class="container post-banner-ad">
                             {!! $settings['amp-banner-ad'] !!}
                         </div>
+                        <nav class="breadcrumbs-container" aria-label="Breadcrumb">
+                            <ol class="breadcrumbs-list">
+                                <li class="breadcrumbs-item">
+                                    <a class="breadcrumbs-link" href="{{route('home')}}"> <span class="breadcrumbs-title"> Home </span> </a>
+                                    <span class="icon breadcrumbs-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 48" aria-hidden="true" style="transform: rotate(180deg);" tabindex="-1">
+                                            <path fill="#000" d="M19.98 5L4 24.2l15.98 19.2.02-4.512L7.874 24.2 20 9.512z"></path>
+                                        </svg>
+                                    </span>
+                                </li>
+                                <li class="breadcrumbs-item breadcrumbs-item-last">
+                                    <a class="breadcrumbs-link" href="{{$post->category_url}}"> <span class="breadcrumbs-title"> {{$post->category}} </span> </a>
+                                    <span class="icon breadcrumbs-icon breadcrumbs-icon-last">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 48" aria-hidden="true" style="transform: rotate(180deg);" tabindex="-1">
+                                            <path fill="#000" d="M19.98 5L4 24.2l15.98 19.2.02-4.512L7.874 24.2 20 9.512z"></path>
+                                        </svg>
+                                    </span>
+                                </li>
+                                <li class="breadcrumbs-item visually-hidden" aria-current="page">{{$post->title}}</li>
+                            </ol>
+                        </nav>
+
                         <div class="widget_container content_page">
                             <!-- start post -->
                             <div
@@ -185,11 +172,11 @@
                             <div class="single_section_content box blog_large_post_style">
                                 <div class="jl_single_style2">
                                     <div class="single_post_entry_content single_bellow_left_align jl_top_single_title jl_top_title_feature">
-                                        <span class="meta-category-small single_meta_category"><a class="post-category-color-text" style="background: #eba845;" href="#">{{$post->category}}</a></span>
                                         <h1 class="single_post_title_main">{{$post->title}}</h1>
                                         <p class="post_subtitle_text">
                                             {{$post->sub_title}}
                                         </p>
+                                        <span class="meta-category-small single_meta_category"><a class="post-category-color-text" style="background: #eba845;" href="{{$post->category_url}}">{{$post->category}}</a></span>
                                         <span class="jl_post_meta">
                                             <span class="jl_author_img_w"><i class="jli-user"></i><a href="{{$post->author_url}}" title="Posts by {{$post->author}}" rel="author">{{$post->author}}</a></span>
                                             @if($post->created_at != $post->updated_at)
@@ -238,7 +225,9 @@
                                  </div>
                              </div>
                              <div class="clearfix"></div>
-                             {!! $settings['amp-between-articles-ad'] !!}
+                             <div class="container post-banner-ad">
+                                {!! $settings['amp-banner-ad'] !!}
+                            </div>
                              @if($post->tag)
                              <div class="single_tag_share">
                                 <div class="tag-cat">
@@ -367,15 +356,15 @@
                                             <button type="submit">Subscribe</button>
                                         </div>
                                     </div>
-                                    <div class="success-for-submit" submit-success>
+                                    <div class="success-for-submit" style="text-align: center;" submit-success>
                                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                                             <strong>Success!</strong> Thank your Signing Up to our newsletter.
                                         </div>
                                     </div>
-                                    <div class="success-for-submit" submitting>
+                                    <div class="success-for-submit" style="text-align: center;" submitting>
                                         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                                     </div>
-                                    <div submit-error class="error-for-submit">
+                                    <div submit-error  style="text-align: center;" class="error-for-submit">
                                         <span>Error submitting the form!</span>
                                     </div>
                                 </span>
