@@ -5,7 +5,7 @@
     <pre>
     APP_NAME=APP_NAME
     APP_ENV=local
-    APP_KEY=base64:NIuy1yYucKYzVoM0L0UVUJaP+RMxwwXk0eLPZNARhrY=
+    APP_KEY='GENERATE_APPLICATION_KEY'
     APP_DEBUG=true
     APP_URL=YOUR_APP_URL
     ADMIN_URL_SECRET='url_after_admin'
@@ -17,8 +17,8 @@
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=db_name
-    DB_USERNAME=root
-    DB_PASSWORD=
+    DB_USERNAME=yourusername
+    DB_PASSWORD=yourpassword
 
     BROADCAST_DRIVER=log
     CACHE_DRIVER=file
