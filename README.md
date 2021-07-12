@@ -72,6 +72,13 @@
 7. Seed User Module for ACL to work <pre>php artisan module:seed User</pre>
 8. Create a Symlink <pre>php artisan storage:link</pre>
 
+##For Analytics Widget to work follow these steps
+1. Go to https://console.cloud.google.com/ and search for Google Analytics Reporting API
+2. Generate oAuth credentials and OAuth 2.0 Client IDs and publish your app
+3. Create a service account and navigate to keys section within the created service acount
+4. Download the json file after you create new keys
+5. Add the data provided in json file in your corressponding .env values
+
 
 ## This project uses the following packages
 1. <pre>nwidart/laravel-modules</pre>
